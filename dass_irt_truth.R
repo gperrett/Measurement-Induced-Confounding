@@ -1,4 +1,3 @@
-source(load_items.R)
 dass <- read_csv('depression_anxiety_stress.csv')
 
 dass <- dass |>
