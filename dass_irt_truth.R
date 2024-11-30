@@ -1,15 +1,5 @@
 dass <- read_csv('depression_anxiety_stress.csv')
 
-dass <- dass |>
-  tidyr::pivot_wider(id_cols = id,
-                     names_from = item, 
-                     values_from = resp, 
-                     names_prefix = 'item'
-  )
-
-dass <- dass[, 18:59]
-
-
 depression <- dass[, c(3, 5, 10, 13, 16, 17, 21, 24, 26, 31, 34, 37, 38, 42)]
 depression_irt <- mirt(depression, itemtype = 'gpcm')
 readr::write_rds(depression_irt, 'depression_irt.rds')
