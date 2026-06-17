@@ -30,8 +30,7 @@ y1hat <- theta1*1.2 + theta2*.8 + .2
 y0hat <- theta1*1.2 + theta2*.8
 cate <- mean(y1hat - y0hat)
 
-# unique iteration
-set.seed(i)
+
 z <- rbinom(N_persons, 1, pi)
 y1 <- y1hat + rnorm(N_persons)
 y0 <- y0hat + rnorm(N_persons)
